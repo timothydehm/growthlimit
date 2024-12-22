@@ -61,9 +61,40 @@
         <label for="neighborhood">Select Neighborhood:</label>
         <select id="neighborhood">
             <option value="">--Select--</option>
-            <option value="tremont">Tremont</option>
-            <option value="central">Central</option>
-            <option value="fairfax">Fairfax</option>
+            <option value="Bellaire-Puritas">Bellaire-Puritas</option>
+            <option value="Broadway-Slavic Village">Broadway-Slavic Village</option>
+            <option value="Brooklyn Centre">Brooklyn Centre</option>
+            <option value="Buckeye-Shaker Square">Buckeye-Shaker Square</option>
+            <option value="Buckeye-Woodhill">Buckeye-Woodhill</option>
+            <option value="Central">Central</option>
+            <option value="Clark-Fulton">Clark-Fulton</option>
+            <option value="Collinwood-Nottingham">Collinwood-Nottingham</option>
+            <option value="Cudell">Cudell</option>
+            <option value="Cuyahoga Valley">Cuyahoga Valley</option>
+            <option value="Detroit Shoreway">Detroit Shoreway</option>
+            <option value="Downtown">Downtown</option>
+            <option value="Edgewater">Edgewater</option>
+            <option value="Euclid-Green">Euclid-Green</option>
+            <option value="Fairfax">Fairfax</option>
+            <option value="Glenville">Glenville</option>
+            <option value="Goodrich-Kirtland Pk">Goodrich-Kirtland Pk</option>
+            <option value="Hopkins">Hopkins</option>
+            <option value="Hough">Hough</option>
+            <option value="Jefferson">Jefferson</option>
+            <option value="Kamm_s">Kamm's</option>
+            <option value="Kinsman">Kinsman</option>
+            <option value="Lee-Harvard">Lee-Harvard</option>
+            <option value="Lee-Seville">Lee-Seville</option>
+            <option value="Mount Pleasant">Mount Pleasant</option>
+            <option value="North Shore Collinwood">North Shore Collinwood</option>
+            <option value="Ohio City">Ohio City</option>
+            <option value="Old Brooklyn">Old Brooklyn</option>
+            <option value="St.Clair-Superior">St.Clair-Superior</option>
+            <option value="Stockyards">Stockyards</option>
+            <option value="Tremont">Tremont</option>
+            <option value="Union-Miles">Union-Miles</option>
+            <option value="University">University</option>
+            <option value="West Boulevard">West Boulevard</option>
         </select>
 
         <label for="devLimit">Development Limit (acres):</label>
@@ -129,7 +160,7 @@ function loadGeoJson(neighborhood) {
     }
 
     // Fetch and add the new GeoJSON layer
-    fetch(`data/${neighborhood}.geojson`) // Make sure this path is correct
+    fetch(`https://raw.githubusercontent.com/timothydehm/growthlimit/main/data/${neighborhood}.geojson`) // Update the URL structure
         .then(response => response.json())
         .then(data => {
             currentGeoJsonLayer = L.geoJSON(data, {
@@ -215,6 +246,3 @@ function downloadSelectedParcels() {
     downloadAnchorNode.click();
     downloadAnchorNode.remove();
 }
-    </script>
-</body>
-</html>
