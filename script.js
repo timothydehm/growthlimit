@@ -26,20 +26,6 @@ document.addEventListener('DOMContentLoaded', function() {
                 totalSelectedAcres = 0;
                 updateSelectedParcelsList();
             }
-     // Trigger simulation for the selected neighborhood
-    const selectedNeighborhood = neighborhoods.find(n => n.id === this.value);
-    if (selectedNeighborhood) {
-        const params = {
-            currentPopulation: selectedNeighborhood.population2020,
-            currentVacantLand: selectedNeighborhood.vacantLand2023,
-            minPopChange: 0, // Set default min population change
-            maxPopChange: 100, // Set default max population change
-            minHouseholdSize: 2, // Set default min household size
-            maxHouseholdSize: 4, // Set default max household size
-            minDensity: 4, // Set default min density
-            maxDensity: 12 // Set default max density
-        };
-        runSimulation(params);
         }
     });
 
